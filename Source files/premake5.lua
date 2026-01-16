@@ -35,13 +35,11 @@ project(Name)
 
     libdirs(Root .. "/external/raylib-5.5_win64_msvc16/lib")
 
-    links {
-        "raylib",
-        "raymath",
-        "rlgl"
-    }
+   links { "raylib"}
 
-   filter "system:windows"
+
+filter "system:windows"
+      links { "winmm", "gdi32", "opengl32" }
       systemversion "latest"
       defines { "PLATFORM_WINDOWS" }
 
