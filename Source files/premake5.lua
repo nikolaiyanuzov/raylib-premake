@@ -27,8 +27,8 @@ project(Name)
    objdir (Root .. "/bin-int/" .. outputdir)
 
    files {
-      "src/**.h",
-      "src/**.cpp"
+      Root .. "/src/**.h",
+      Root .. "/src/**.cpp"
    }
 
     includedirs(Root .. "/external/raylib-5.5_win64_msvc16/include")
