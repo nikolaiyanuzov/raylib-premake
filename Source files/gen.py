@@ -7,8 +7,6 @@ ROOT = Path(__file__).parent.resolve()
 
 os.environ["ROOT"] = str(ROOT.parent)
 
-print("Running in:", ROOT.parent)
-
 premake = ROOT / "Premake" / "premake5.exe"
 
 if not premake.exists():

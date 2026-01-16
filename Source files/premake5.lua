@@ -31,9 +31,15 @@ project(Name)
       "src/**.cpp"
    }
 
-   includedirs {
-      "include"
-   }
+    includedirs(Root .. "/external/raylib-5.5_win64_msvc16/include")
+
+    libdirs(Root .. "/external/raylib-5.5_win64_msvc16/lib")
+
+    links {
+        "raylib",
+        "raymath",
+        "rlgl"
+    }
 
    filter "system:windows"
       systemversion "latest"
